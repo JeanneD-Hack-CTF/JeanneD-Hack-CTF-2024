@@ -1,0 +1,169 @@
+@font-face {
+    font-family: TwitterChirp;
+    src: url("/static/fonts/Chirp-Light.woff2") format('woff2');
+    font-weight: 300;
+    font-style: 'normal';
+    font-display: 'swap';
+}
+
+body {
+    font-family: TwitterChirp, sans-serif;
+    margin: 0;
+    color: #ece0d0;
+    background-color: #0c0c7250;
+}
+
+header {
+    align-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 90%);
+    padding: 3em;
+}
+
+nav {
+    text-align: center;
+    background: #1d9bf0;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+nav a {
+    padding: 1em;
+    color: rgba(0, 0, 0, 90%);
+    text-decoration: unset;
+    border-radius: 15px;
+}
+
+nav a:visited {
+    color: rgba(0, 0, 0, 90%);
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+
+footer {
+    background: black;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+#content {
+    padding: 2em;
+    margin: 2em;
+    background: rgba(0, 0, 0, 80%);
+    text-align: center;
+    border-radius: 30px;
+    border: solid black;
+}
+
+input[type=text], input[type=password] {
+    width: 16%;
+}
+
+button, input[type=submit], input[type=button] {
+    border: 1px solid rgba(0, 0, 255, 60%);
+    border-radius: 8px;
+    background: #1d9bf0;
+    font-family: TwitterChirp, sans-serif;
+    font-size: large;
+    margin: 1em;
+    padding: 5px;
+    color: black;
+}
+
+button:hover, input[type=submit]:hover, input[type=button]:hover {
+    cursor: pointer;
+}
+
+div.error {
+    border: 1px solid rgba(0, 0, 255, 60%);
+    border-radius: 8px;
+    background: #1d9bf0;
+    color: black;
+    text-align: center;
+}
+
+div.post {
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 4px;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    text-align: left;
+}
+
+div.mod_buttons {
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 13%;
+    float: right;
+}
+
+div.connected {
+    max-width: 20%;
+    background-color: #1d9bf0; /* Blue */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    color: white;
+}
+
+#searchtable {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The alert message box */
+.alert {
+    max-width: 20%;
+    background-color: #f44336; /* Red */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    color: white;
+}
+
+.info {
+    max-width: 20%;
+    background-color: #36f446; /* Red */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    color: white;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+} 

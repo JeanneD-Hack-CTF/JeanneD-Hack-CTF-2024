@@ -1,0 +1,4 @@
+# Admin bot login every minute
+# * * * * * /bin/bash /app/bot/bot.sh
+* * * * * /opt/bitnami/python/bin/python3 /app/bot/bot.py --host "127.0.0.1" --port 80 --delay 1 --headless >>/var/log/admin-bot.log
+

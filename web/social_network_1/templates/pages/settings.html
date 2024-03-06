@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Profile parameters</h2>
+
+<nav id="profile_menu">
+    <a href="/profile">My profile</a>
+    <a href="/profile?p=friends">My friends</a>
+    <!-- <a href="/search">Search for other users</a> -->
+</nav>
+
+<p>Password reset</p>
+<form action="/resetpassword" method="POST">
+    <label for="newpassword">Enter your new password here: </label>
+    <input type="text" name="newpassword">
+    <br>
+    <input type="submit" name="Change password">
+</form>
+{% if resetpassword %}
+<div class="error">
+    <p>Password reset feature coming soon !</p>
+</div>
+{% endif %}
+{% endblock %}

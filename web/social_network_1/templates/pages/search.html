@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search engine</h2>
+
+<nav id="profile_menu">
+    <a href="/profile">My profile</a>
+    <a href="/profile?p=friends">My friends</a>
+    <a href="/profile?p=settings">Profile parameters</a>
+</nav>
+
+This page is under construction, use it carefully !
+
+<h3>User search :</h3>
+<form action="/search" method="POST">
+    <label for="username">Username :</label>
+    <input type="text" name="user" placeholder="username" required>
+    <input type="hidden" name="token" value="supersecretcsrftoken">
+    <input type="submit" value="Search">
+</form>
+
+{% if search %}
+    {% if users %}
+    <h3>Search results:</h3>
+    <table id="searchtable">
+        <tr>
+            <th>Username&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Account creation</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h3>No users found !</h3>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

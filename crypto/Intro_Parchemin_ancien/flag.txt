@@ -1,0 +1,18 @@
+dans l'univers fascinant de la cryptographie, une technique vieille de plusieurs siecles persiste avec une elegance intemporelle : la substitution monoalphabetique.
+chaque lettre de l'alphabet est meticuleusement remplacee par une autre, creant ainsi une danse complexe de caracteres codes.
+
+imaginez un parchemin ancien renfermant des secrets profondement enfouis. chaque mot, chaque phrase, est enveloppe dans un voile mysterieux grâce a la substitution
+monoalphabetique. les lettres se deplacent en harmonie, suivant un schema preetabli qui defie la comprehension sans la cle appropriee.
+
+les cryptographes astucieux de l'histoire ont utilise cette methode pour dissimuler des messages confidentiels et des informations cruciales. les espions, les erudits
+et les strateges ont ete seduits par la complexite apparente de cette technique, rendant toute tentative de dechiffrage sans la cle presque insurmontable.
+
+l'algorithme, semblable a une choregraphie secrete, transforme chaque lettre en une autre, preservant les frequences d'apparition originales avec une precision
+deconcertante. ainsi, le message code, comme un puzzle litteraire, defie quiconque tente de percer son mystere sans la cle magique.
+
+en explorant ces concepts captivants, nous plongeons dans l'art subtil de la substitution monoalphabetique, où les lettres deviennent des acteurs masques dans une
+piece cryptographique, preservant l'enigme du langage tout en eveillant la curiosite des esprits aventureux.
+
+- chatgpt, le cinq fevrier deux-mille vingt quatre
+
+bien joue ! le flag est le suivant : sinononpeututiliseraescestmieux

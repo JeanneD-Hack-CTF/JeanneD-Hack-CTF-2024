@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Multi-factor authentication validation page</h2>
+
+<p>The OTP validation code was send to you by email.</p>
+
+<form action="{{ url_for('mfa') }}" method="POST">
+    <label for="otp">Enter received validation code :</label>
+    <input type="text" name="otp" placeholder="123456">
+    <input id="send_otp" type="submit" value="Validate">
+</form>
+
+{% endblock %}

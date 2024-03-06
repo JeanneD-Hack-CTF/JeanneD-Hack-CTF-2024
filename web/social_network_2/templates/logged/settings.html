@@ -1,0 +1,15 @@
+{% extends "logged/profile.html" %}
+{% block innercontent%}
+
+<h2>Profile parameters</h2>
+
+<h3>Password reset</h3>
+
+<form action="{{ url_for('settings') }}" method="POST">
+    <label for="newpassword">Enter your new password here: </label>
+    <input type="text" name="newpassword">
+    <br>
+    <input type="submit" name="submit" value="Change password">
+</form>
+
+{% endblock %}

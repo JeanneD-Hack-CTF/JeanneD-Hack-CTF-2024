@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Y - Just Y</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <header>
+            {% if info %}
+                <div class="info">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Info:</strong> {{ info }}
+                </div> 
+            {% endif %}
+            
+            {% if error %}
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Error:</strong> {{ error }}
+                </div> 
+            {% endif %}
+
+            <h1>Y, the new social network</h1>
+
+            <nav id="menu">{% block menu %}
+                <a href="{{ url_for('home') }}">Home</a>
+                {% if not user %}
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('register') }}">Register</a>
+                {% else %}
+                    <a href="{{ url_for('administration') }}">Administration</a>
+                    <a href="{{ url_for('moderation') }}">Moderation</a>
+                    <a href="{{ url_for('profile') }}">Your profile</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+            {% endblock %}</nav>
+
+            {% if user %}
+                <div class="connected">
+                    <strong>Connected as :</strong> {{ user }}
+                </div>
+            {% endif %}
+        </header>
+
+        <div id="content">{% block content %}
+        {% endblock %}</div>
+
+        <div id="footer">{% block footer %}
+            <footer>JeanneD'Hack CTF</footer>
+        {% endblock %}</div>
+
+    </body>
+</html>

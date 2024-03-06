@@ -1,0 +1,2 @@
+gmpy2~=2.1.5
+pycryptodome~=3.19.0

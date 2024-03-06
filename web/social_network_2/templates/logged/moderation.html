@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Moderation panel</h2>
+
+<p>You can accept or refuse the newly created posts. For the moment all posts goes to moderation first to avoid problems.</p>
+<p>Accepted posts goes to home page, and refused posts can be deleted or kept for the archives by an administrator.</p>
+<p>A comment can be added with images and links to explain why the post was refused.</p>
+
+{% if user %}
+
+    <h4>List of unmodered posts</h4>
+
+    <!-- Show pending posts -->
+    {% for post in pending %}
+        <div class="post" style="display: inline-block;">
+            <p><strong>{{ post[2] }}</strong> - {{ post[1] }}</p>
+            <blockquote>
+                {{ post[3] }}
+            </blockquote>
+            
+            <form action="{{ url_for('moderation') }}" method="POST">
+                <input type="hidden" name="post_id" value="{{ post[0] }}">
+                <textarea name="comment" cols="25" rows="3" placeholder="Insert your comment here..."></textarea>
+                <button name="status" value="accepted" type="submit">Accept post</button>
+                <button name="status" value="refused" type="submit">Refuse post</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    <h4>List of refused post by moderation</h4>
+
+    <!-- Show refused posts with comments from moderators -->
+    {% for post in refused %}
+        <div class="post" style="display: inline-block;">
+            <p><strong>{{ post[2] }}</strong> - {{ post[1] }}</p>
+            <blockquote>
+                {{ post[3] }}
+            </blockquote>
+            <p id="post{{ post[0] }}"><strong>Comment:</strong> {{ post[4] | safe }}</p>
+        </div>
+    {% endfor %}
+
+{% endif %}
+{% endblock %}

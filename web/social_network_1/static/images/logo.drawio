@@ -1,0 +1,19 @@
+<mxfile host="Electron" modified="2023-11-04T15:46:06.886Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.9.3 Safari/537.36" etag="RbwPDOqWAa2krBKVJrN5" version="21.6.8" type="device">
+  <diagram name="Page-1" id="rKA11BAEepZfE7o2p1iF">
+    <mxGraphModel dx="1687" dy="986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="R2r-No9TY5mTq3Z2rnGI-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="151.13" width="480" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="R2r-No9TY5mTq3Z2rnGI-24" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rotation=60;strokeWidth=40;fillColor=#FFFFFF;strokeColor=#FFFFFF;direction=west;size=9.010000000000048;" vertex="1" parent="1">
+          <mxGeometry x="134.93" y="297.7" width="205.75" height="15.59" as="geometry" />
+        </mxCell>
+        <mxCell id="R2r-No9TY5mTq3Z2rnGI-18" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=174.25;strokeWidth=18;fillColor=#000000;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="185.75" y="210" width="234.25" height="362.25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

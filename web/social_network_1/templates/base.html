@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Y - Just Y</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <header>
+            <h1>Y, the new social network</h1>
+
+            <nav id="menu">{% block menu %}
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="/admin">Administration</a>
+                <a href="/profile">Your profile</a>
+                <a href="/logout">Logout</a>
+            {% endblock %}</nav>
+        </header>
+
+        <div id="content">{% block content %}
+        {% endblock %}</div>
+
+        <div id="footer">{% block footer %}
+            <footer>JeanneD'Hack CTF</footer>
+        {% endblock %}</div>
+
+    </body>
+</html>

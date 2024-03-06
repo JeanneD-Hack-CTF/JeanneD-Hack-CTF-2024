@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ user|capitalize }}'s account</h2>
+
+<nav id="profile_menu">
+    <a href="{{ url_for('profile') }}">My profile</a>
+    <a href="{{ url_for('friends') }}">My friends</a>
+    <a href="{{ url_for('create_post') }}">Create a new post</a>
+    <a href="{{ url_for('settings') }}">Profile parameters</a>
+    <a href="{{ url_for('search') }}">Search for other users</a>
+</nav>
+
+<div id="innercontent">
+    {% block innercontent %}
+    {% endblock %}
+</div>
+
+{% if role %}
+    <p>Your role is : {{ role }}</p>
+{% endif %}
+{% endblock %}

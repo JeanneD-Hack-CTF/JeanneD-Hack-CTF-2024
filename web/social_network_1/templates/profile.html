@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% if error %}
+<div class="error">
+    <p>{{ error }}</p>
+</div>
+{% endif %}
+
+<h2>My profile</h2>
+
+<nav id="profile_menu">
+    <a href="/profile?p=friends">My friends</a>
+    <a href="/profile?p=settings">Profile parameters</a>
+    <!-- <a href="/search">Search for other users</a> -->
+</nav>
+
+<p>
+    Our social network is under construction, you will be able soon to search
+    for others users !
+</p>
+{% endblock %}

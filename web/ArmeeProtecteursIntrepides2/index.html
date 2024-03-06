@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>GraphQL</title>
+    </head>
+
+    <body>
+        <button id="send">Send hello to Machine.</button>
+        <br>
+        <br>
+        <textarea id="interface" readonly="true" cols="50" rows="5"></textarea>
+
+        <script>
+            window.onload = () => {
+                button = document.getElementById("send")
+                button.onclick = async () => {
+                    res = await fetch("/graphql", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: '{"query":"{hello}"}'
+                    })
+                    answer = await res.json().then((obj) => {
+                        document.getElementById("interface").value = obj.data.hello
+                    })
+                    
+                }
+            }
+        </script>
+    </body>
+
+</html>

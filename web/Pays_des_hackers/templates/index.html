@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Bienvenue !</h1>
+        <p>Notre analyse personnalisée a déterminé que vous êtes un profil : {{role}}</p>
+        {% if role == "Hunter": %}
+        <img src="/images/bb.jpg" style="width: 1024px;">
+        {% elif role == "Pentester": %}
+        <img src="/images/pen.jpg" style="width: 1024px;">
+        {% elif role == "Analyste SOC": %}
+        <img src="/images/soc.jpg" style="width: 1024px;">
+        {% elif role == "Mauvais Hacker...": %}
+        <img src="/images/kiddie.jpg" style="width: 1024px;">
+        {% elif role == "Administratorz_du_76": %}
+        <p>Bravo ! Voici le flag : FLAG_{Je_suis_un_flaggeur_bébé}</p>
+        <img src="/images/gg.jpg" style="width: 1024px;">
+        {% endif %}
+        <!-- Next step... Implementing a user list and fetch possible roles from GET /role-->
+    </body>
+</html>

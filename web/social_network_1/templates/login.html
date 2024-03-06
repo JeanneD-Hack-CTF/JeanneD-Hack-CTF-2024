@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% if error %}
+<div class="error">
+    <p>{{ error }}</p>
+</div>
+{% endif %}
+{% if user %}
+<h2>Welcome, {{ user }} !</h2>
+{% else %}
+<h2>You are not connected !</h2>
+
+<p>Use login form below to connect :</p>
+
+<!-- /!\ REMOVE BEFORE PRODUCTION -->
+<!-- User creds for testing : johndoe:password -->
+<!-- /!\ REMOVE BEFORE PRODUCTION -->
+<form action="/login" method="POST">
+    <label for="username">Username : </label>
+    <input type="text" name="username" placeholder="Username" required></br>
+    <label for="password">Password : </label>
+    <input type="password" name="password" placeholder="Password#123" required></br>
+    <input type="submit" value="Sign in">
+</form>
+{% endif %}
+{% endblock %}

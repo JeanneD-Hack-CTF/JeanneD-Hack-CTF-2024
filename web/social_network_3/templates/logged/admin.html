@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Administration panel</h2>
+
+<!-- Show refused posts with comments from moderators -->
+{% for post in refused %}
+    <div class="post" style="display: inline-block;">
+        <p><strong>{{ post[2] }}</strong> - {{ post[1] }}</p>
+        <blockquote>
+            {{ post[3] }}
+        </blockquote>
+        <!-- No more XSS here -->
+        <p id="post{{ post[0] }}"><strong>Comment:</strong> {{ post[4] }}</p>
+    </div>
+
+    <form action="{{ url_for('administration') }}" method="POST">
+        <input type="hidden" name="post_id" value="{{ post[0] }}">
+        <button name="status" value="archived" type="submit">Archive post</button>
+        <button name="status" value="deleted" type="submit">Delete post</button>
+    </form>
+{% endfor %}
+
+{% endblock %}

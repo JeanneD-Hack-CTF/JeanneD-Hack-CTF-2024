@@ -1,0 +1,35 @@
+{% extends "logged/profile.html" %}
+{% block innercontent %}
+
+<h2>Search engine</h2>
+
+<h3>User search :</h3>
+<form action="{{ url_for('search') }}" method="POST">
+    <label for="username">Username :</label>
+    <input type="text" name="user" placeholder="username" required>
+    <input type="submit" value="Search">
+</form>
+
+{% if search %}
+    {% if users %}
+    <h3>Search results:</h3>
+    <table id="searchtable">
+        <tr>
+            <th>Username&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Role&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Account creation</th>
+        </tr>
+        {% for u in users %}
+        <tr>
+            <td>{{ u[0] }}</td>
+            <td>{{ u[1] }}</td>
+            <td>{{ u[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h3>No users found !</h3>
+    {% endif %}
+{% endif %}
+
+{% endblock %}
