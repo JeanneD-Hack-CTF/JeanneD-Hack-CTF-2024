@@ -18,4 +18,4 @@ Challenge du JeanneD'Hack CTF de 2024.
 - Fenrisufulsur
 - Kacihmd
 - Loukabvn
-- RichardDufour
+- Orangiuss
